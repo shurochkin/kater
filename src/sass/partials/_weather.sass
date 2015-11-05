@@ -1,0 +1,73 @@
+
+#weather
+	position: absolute
+	top: 0
+	left: 0   
+	width: 100%
+	height: 100% 
+	display: none 
+	& > ul > li > div
+		position: absolute
+		top: 0
+		cursor: pointer
+		&::after
+			position: absolute
+			top: 0
+			left: 0   
+			width: 100%
+			height: 100% 
+			background: $color-black
+		& > img
+			width: 100vw
+			height: auto
+			position: relative
+		.sign
+			display: inline-block
+			position: absolute
+			top: 40%
+			color: $color-white
+			width: 20%
+			//opacity: 0
+			& > img
+				margin: 0 auto 30px
+				display: block
+				width: 30%
+			span
+				text-align: left
+				margin-bottom: 0.4em
+				display: block 
+				+vr-baseline(3em, 1em)
+		.shadow 
+			+full-size()
+			position: absolute
+			top: 0
+			left: 0
+			background-color: rgba(0,0,0,.4) 
+			display: block
+			+transition(all 0.5s ease)
+			
+		&.selected > .shadow
+			background-color: rgba(0,0,0,0) 
+
+	&.show
+		display: block
+	#char-left .sign
+		left: 5%
+	#char-right .sign
+		right: 5%
+		 
+	
+
+		
+	.divider 
+		position: absolute
+		background: $color-white
+		width: 4px
+		top: 0
+		margin-left: -2px
+		display: none
+
+	#characters
+		padding: 0
+		margin: 0
+		

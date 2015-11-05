@@ -1,0 +1,82 @@
+.button
+	float: left
+	min-width: 150px
+	max-width: 250px
+	display: block
+	margin: 1em
+	padding: 1em 2em
+	border: none
+	background: none
+	color: inherit
+	vertical-align: middle
+	position: relative
+	z-index: 1
+	-webkit-backface-visibility: hidden
+	-moz-osx-font-smoothing: grayscale
+	&:focus
+		outline: none
+	> span
+		vertical-align: middle
+
+.button--isi
+	padding: 1.2em 2em
+	background: none
+	overflow: hidden
+	&::before
+		content: ''
+		z-index: -1
+		position: absolute
+		top: 50%
+		left: 100%
+		margin: -15px 0 0 1px
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		background: $color-blue
+		-webkit-transform-origin: 100% 50%
+		transform-origin: 100% 50%
+		-webkit-transform: scale3d(1, 2, 1)
+		transform: scale3d(1, 2, 1)
+		-webkit-transition: -webkit-transform 0.3s, opacity 0.3s
+		transition: transform 0.3s, opacity 0.3s
+		-webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1)
+		transition-timing-function: cubic-bezier(0.7, 0, 0.9, 1)
+	.button__icon
+		vertical-align: middle
+	> span
+		vertical-align: middle
+		//padding-left: 0.75em
+	&:hover::before
+		-webkit-transform: scale3d(9, 9, 1)
+		transform: scale3d(9, 9, 1)
+
+#test-drive-close
+	padding: 20px
+	display: inline-block
+	float: right
+	color: $color-white 
+	cursor: pointer
+	
+
+#test-drive-open
+	float: right
+	margin-right: 14px
+	width: 210px
+	height: 35px
+	font-family: $font-light
+	padding: 10px 20px
+	text-transform: uppercase 
+	color: $color-white
+	border: 1px solid rgba(255,255,255,.3)
+	background: none 
+	font-size: 12px 
+	letter-spacing: 1px  
+	+transition(all .3s easy)
+	&:hover
+		border: 1px solid $color-blue
+		color: $color-grey-dark
+
+.fp-viewing-7, .fp-viewing-9
+	#test-drive-open
+		color: $color-grey-dark
+		border: 1px solid $color-grey-dark

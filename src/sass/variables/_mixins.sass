@@ -1,0 +1,35 @@
+
+@mixin full-size()
+  width: 100%
+  height: 100%
+  
+@mixin transition($data)
+  -webkit-transition: $data
+  -moz-transition: $data
+  transition: $data
+
+@mixin transform($data)
+  -webkit-transform: $data
+  -moz-transform: $data
+  transform: $data
+
+@mixin background-size($data)
+  -webkit-background-size: $data 
+  -o-background-size: $data 
+  background-size: $data  
+
+@mixin filter-gradient($start-color, $end-color, $orientation: vertical) 
+  @include for-legacy-browsers((ie: "8"), $gradient-support-threshold) 
+    @include has-layout
+    $gradient-type: if($orientation == vertical, 0, 1)
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=#{$gradient-type}, startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}')
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content

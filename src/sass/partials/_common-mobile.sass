@@ -1,0 +1,116 @@
+
+
+html,body
+	+full-size()
+
+body 
+	background-color: $color-blue-dark 
+	background-repeat: repeat-x
+	background-position: 0 center   
+	position: relative
+	font-family: $font-thin 
+	+vr-baseline(4vw, 5vw)
+	&.cbp-aside-push-toleft
+		#fp-nav, #header
+			right: $push-toleft
+			+transition(all 0.5s ease)
+		.overlay
+			display: block
+		#test-drive-open
+			display: block
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-bold
+	margin-top: 0
+	color: $color-white
+
+#aside .inner
+	padding: 1em
+
+
+#parallax
+	height: 450px 
+	background: url(../images/mobile/1_background.jpg) no-repeat bottom center
+	position: relative
+	h1, img
+		position: absolute
+	h1
+		left: 0
+		text-transform: uppercase
+		font-size: 4rem 
+		top: 1.5em 
+		bottom: 3em 
+		padding: 0 0.3em 
+		span
+			color: $color-blue
+	img
+		bottom: 0
+		right: 0
+		height: auto
+		width: auto
+
+	 		
+#header
+	position: fixed
+	top: 0
+	left: 0
+	background: $color-blue-dark 
+	width: 100%
+	z-index: 100
+	p
+		text-indent: -9999px 
+		background: url(../images/svg/logo.svg) no-repeat 0 0
+		+background-size(contain)
+		width: 45%
+		height: 22px
+		margin: 20px 1.5em
+		margin-right: 0
+		float: left
+.fp-viewing-14, .fp-viewing-15, .fp-viewing-16
+	#header
+		p
+			background: url(../images/svg/logo_black.svg) no-repeat 0 0
+
+
+#test-drive-open
+	width: 125px
+	min-width: 124px  
+	margin: 12px 1.5em
+	margin-left: 0  
+	float: right
+
+
+#bg-gradient
+	background: rgba(29,37,52,1)
+	background: -moz-linear-gradient(top, rgba(29,37,52,1) 0%, rgba(34,47,69,1) 10%, rgba(42,60,94,1) 23%, rgba(48,71,115,1) 34%, rgba(58,86,137,1) 46%, rgba(75,110,163,1) 56%, rgba(98,137,187,1) 67%, rgba(125,167,211,1) 78%, rgba(148,190,227,1) 89%, rgba(182,215,237,1) 100%)
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(29,37,52,1)), color-stop(10%, rgba(34,47,69,1)), color-stop(23%, rgba(42,60,94,1)), color-stop(34%, rgba(48,71,115,1)), color-stop(46%, rgba(58,86,137,1)), color-stop(56%, rgba(75,110,163,1)), color-stop(67%, rgba(98,137,187,1)), color-stop(78%, rgba(125,167,211,1)), color-stop(89%, rgba(148,190,227,1)), color-stop(100%, rgba(182,215,237,1)))
+	background: -webkit-linear-gradient(top, rgba(29,37,52,1) 0%, rgba(34,47,69,1) 10%, rgba(42,60,94,1) 23%, rgba(48,71,115,1) 34%, rgba(58,86,137,1) 46%, rgba(75,110,163,1) 56%, rgba(98,137,187,1) 67%, rgba(125,167,211,1) 78%, rgba(148,190,227,1) 89%, rgba(182,215,237,1) 100%)
+	background: -o-linear-gradient(top, rgba(29,37,52,1) 0%, rgba(34,47,69,1) 10%, rgba(42,60,94,1) 23%, rgba(48,71,115,1) 34%, rgba(58,86,137,1) 46%, rgba(75,110,163,1) 56%, rgba(98,137,187,1) 67%, rgba(125,167,211,1) 78%, rgba(148,190,227,1) 89%, rgba(182,215,237,1) 100%)
+	background: -ms-linear-gradient(top, rgba(29,37,52,1) 0%, rgba(34,47,69,1) 10%, rgba(42,60,94,1) 23%, rgba(48,71,115,1) 34%, rgba(58,86,137,1) 46%, rgba(75,110,163,1) 56%, rgba(98,137,187,1) 67%, rgba(125,167,211,1) 78%, rgba(148,190,227,1) 89%, rgba(182,215,237,1) 100%)
+	background: linear-gradient(to bottom, rgba(29,37,52,1) 0%, rgba(34,47,69,1) 10%, rgba(42,60,94,1) 23%, rgba(48,71,115,1) 34%, rgba(58,86,137,1) 46%, rgba(75,110,163,1) 56%, rgba(98,137,187,1) 67%, rgba(125,167,211,1) 78%, rgba(148,190,227,1) 89%, rgba(182,215,237,1) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1d2534', endColorstr='#b6d7ed', GradientType=0 )
+
+#bg-grey
+	background-color: $color-grey
+#bg-white
+	background-color: $color-white
+
+
+.fixed
+	position: absolute
+	top: 0
+	left: 0
+	+full-size()
+
+.overlay
+	+full-size()
+	background: rgba(0,0,0,.8)
+	z-index: 999
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+
+#spritespin
+
+

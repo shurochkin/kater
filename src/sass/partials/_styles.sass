@@ -1,0 +1,236 @@
+.wow 
+	display: none
+	&.animated
+		display: block
+
+
+.overview-ico
+	display: inline-block
+	//margin-top: 20px
+	width: 165px
+	height: auto
+	text-align: center
+	img
+		margin: 0 auto 
+
+.intro
+	margin: 0 auto
+	width: 90% 
+
+
+.section
+	color: $color-white
+	opacity: 0
+	+transition(opacity .2s ease)
+	&.current, &#section01
+		opacity: 1
+	
+	.row
+		padding: 1vh 0 
+		margin-left: -1.5em
+		margin-right: -1.5em
+		position: absolute
+		width: 90% 
+		clear: both
+		.row 
+			width: auto 
+			position: relative
+		.col, .col2, .col3
+			width: 25%
+			padding: 0 1.5em 
+			display: inline-block 
+			vertical-align: top
+			p
+				span
+					+vr-baseline(4em, 1em)
+					display: block
+					color: $color-blue
+					font-family: $font-normal 
+					margin-bottom: .2em 
+		.small
+			h3
+				color: $color-blue
+				font-family: $font-normal
+				text-transform: uppercase 
+				+vr-baseline(.7em, 1.4em) 
+			p
+				color: $color-grey-light
+				+vr-baseline(.85em, 1.4em)
+		.col2
+			width: 50%
+		.col3
+			width: 30%
+
+
+#section17, #section16, #section15, #section14
+	color: $color-black 
+
+#section17
+	background: $color-white
+	opacity: 1 !important
+
+#section01
+	.row
+		text-align: center
+		bottom: 0
+		img
+			margin: 0 auto 
+			
+		#down
+			cursor: pointer
+			
+
+#section02
+	background: #1d2534
+	opacity: 1
+	.row
+		top: 60%
+
+#section03
+	.row
+		top: 65%
+		.small
+			margin-top: 1em
+
+
+
+#section09
+	.row
+		top: 5%
+		 	
+
+#section10
+	.row
+		top: 60%
+		&:first-child
+			top: 55%
+			.col
+				width: 100%
+	.col3:nth-child(3)
+		p
+			margin-top: 0
+			span
+				color: $color-white
+				+vr-baseline(4em, 1em)
+				margin-bottom: 0
+		
+
+#section11
+	.row
+		top: 35% 
+	.col3:last-child
+		float: right
+	.col
+		width: 23%
+		p
+			margin-top: 0
+			span
+				color: $color-white
+				+vr-baseline(3em, 1em)
+				margin-bottom: 0px
+			small
+				+vr-baseline(1em, 1.2em)
+				text-transform: uppercase
+				display: block 
+	.img-tooltip
+		height: 350px
+		width: 30%
+		position: relative
+		img
+			-webkit-clip-path: circle(0px at 165px 165px)
+			clip-path: circle(0px at 165px 165px)
+			+transition(all 1s ease)
+	.box-tooltip
+		position: absolute
+		bottom: -28px
+		left: -35px
+
+#section12
+	opacity: 1
+	.row
+		bottom: 10%
+		h1
+			text-transform: uppercase
+			+vr-baseline(2.7em, 1em) 
+			span
+				color: $color-blue
+				font-family: $font-light  
+	.col3:last-child
+		vertical-align: bottom
+		p
+			color: $color-black
+			text-align: center
+	.manual
+		text-align: center
+			
+#section13, #section15
+	.row
+		top: 30%
+		.col3
+			float: right
+#section13
+	.box-tooltip
+		position: absolute
+		bottom: 0
+		left: 45%
+
+
+#section14
+	background: url(../images/romantic.jpg) no-repeat 100% 0
+	top: 0
+	right: 0  
+	+background-size(cover) 
+	opacity: 1 !important   
+	.row
+		top: 25%
+		h1
+			text-transform: uppercase
+			+vr-baseline(2.7em, 1em) 
+			color: $color-white
+			span
+				color: $color-blue
+				font-family: $font-light  
+
+#section15
+	.row
+		color: $color-white
+
+#section16
+	background: #e7edf3
+	opacity: 1
+	.row
+		top: 10%
+		h1
+			color: $color-black
+		.col2
+			text-align: center
+			h1, h3, p
+				text-align: left
+			h3
+				color: $color-blue
+				text-transform: uppercase 
+				font-family: $font-light 
+	.img
+		img
+			margin: 2em auto
+			width: 80% 
+
+
+#section17
+	.row
+		top: 10%
+		.col2
+			padding-left: 0
+		.col
+			width: 35%
+			margin-left: 10em
+		h1
+			color: $color-black
+		p:first-child
+			margin-top: 0
+		.blue
+			color: $color-blue	
+			padding-left: 0 
+		img 
+			margin: 0 auto 
+			width: 100%

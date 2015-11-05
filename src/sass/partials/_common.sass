@@ -1,0 +1,259 @@
+#orientation-info
+	position: absolute
+	background: $color-blue-dark
+	top: 0
+	left: 0
+	margin: 0
+	padding: 0
+	width: 0px
+	height: 0px
+	opacity: 0
+	pointer-events: none
+	z-index: 1000000
+	.orientation-copy
+		font-size: 15px
+		color: $color-white
+		text-align: center
+		letter-spacing: 1px
+		//margin-left: 100px
+		.orientation-alert
+			font-size: 56px
+			letter-spacing: 10px
+			line-height: 30px
+			.icon
+				color: #db4747
+				font-size: 22px
+
+#preloader
+	z-index: 999
+	+full-size()
+	position: absolute
+	top: 0
+	left: 0
+	background: $color-blue-dark
+	.inner
+		margin-top: 45vh 
+		text-align: center
+		p
+			color: $color-white
+			font-size: 1em 
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+
+
+// $base-font-size: 16px
+// $base-line-height: 24px
+
+//+establish-baseline	
+
+html,body
+	+full-size()
+
+body 
+	background-color: #1d2534  
+	background-repeat: repeat-x
+	background-position: 0 center   
+	position: relative
+	font-family: $font-light 
+	+vr-baseline(1.2vw, 1.7vw)
+	&.cbp-aside-push-toleft
+		#fp-nav 
+			right: $push-toleft
+			+transition(all 0.5s ease)
+		.overlay
+			display: block
+		#test-drive-open
+			display: none
+
+h1, h2, h3, h4, h5, h6
+	font-family: $font-bold
+	margin-top: 0
+	color: $color-white
+
+h1
+	+vr-baseline(2.5em, 1em)
+
+#header, #footer
+	position: absolute
+	right: 0
+	z-index: 100
+	padding: 20px  
+	+transition(all .7s ease)
+	box-sizing: border-box
+	color: $color-white 
+	 		
+#header
+	top: 0
+	p
+		float: right
+		text-indent: -9999px 
+		background: url(../images/svg/logo.svg) no-repeat 0 0
+		width: 240px
+		height: 24px
+		margin-right: 14px
+.fp-viewing-6, .fp-viewing-7, .fp-viewing-9
+	#header
+		p
+			background: url(../images/svg/logo_black.svg) no-repeat 0 0
+
+#footer
+	bottom: 0 	
+
+
+
+.fixed
+	position: absolute
+	top: 0
+	left: 0
+	+full-size()
+
+.overlay
+	+full-size()
+	background: rgba(0,0,0,.8)
+	z-index: 999
+	display: none
+	position: fixed
+	top: 0
+	left: 0
+
+#spritespin
+	opacity: 0
+
+
+.background
+	+full-size()
+	position: absolute
+	top: 0
+	//+transform(translate3d(0px, -100vh, 0px))
+	+transition(background-color .2s ease)
+	+transition(opacity .5s ease)
+	background-position: 50% 50%
+	background-repeat: no-repeat   
+	+background-size(contain)    
+
+.bgn 
+	background: none !important
+.bg-atmos 
+	background-image: url(../images/atmos.png)
+	+transition(background-image .7s ease)
+
+article
+	+full-size()
+	position: absolute
+	opacity: 0
+	+transition(all .5s ease)
+
+
+
+#princyp
+	background: url(../images/atmos_princyp.png) no-repeat 50% 50%
+	top: 0
+	left: 0  
+	+background-size(contain)    
+
+#aero
+	background: url(../images/aero.png) no-repeat 50% 50%
+	top: 0
+	left: 0  
+	+background-size(100%)
+
+	
+
+
+	
+#romantic
+	background: url(../images/romantic.jpg) no-repeat 100% 0
+	top: 0
+	right: 0  
+	+background-size(cover)    
+
+
+
+
+
+
+
+.fp-viewing-5
+	.fixed
+		background: url(../images/fon2.png) no-repeat 50% 50%
+		+background-size(cover)   
+		
+
+
+.fp-viewing-3
+	#weather
+		display: block
+
+
+.fp-viewing-2
+	.background
+		opacity: .2
+
+
+.fp-viewing-4
+	#aero
+		opacity: 1
+	.row
+		.col
+			p > span
+				margin-bottom: 0
+
+.fp-viewing-6
+	#spritespin
+		.spritespin-stage
+			z-index: 20
+			cursor: url(../images/rotate.cur), move
+
+.fp-viewing-8
+	#romantic
+		opacity: 1
+
+// .fp-viewing-14
+// 	#dashboard
+// 		opacity: 1
+
+
+// #section03
+// 	background: url(../images/svg/atmos_princyp.svg) no-repeat 0 0
+// 	-webkit-background-size: contain 
+// 	-o-background-size: contain 
+// 	background-size: contain   
+
+
+//////////////////////////////////////////////////////
+
+#facts
+	background: none 
+	&.bg
+		background: #1d2534
+
+.arrowDownOnHome #down
+	animation-name: drop
+	animation-duration: 1.5s
+	animation-timing-function: linear
+	animation-delay: 0s
+	animation-iteration-count: infinite
+	animation-play-state: running
+
+.arrowDownOnHome #down
+	position: relative
+	top: 0
+	opacity: 0
+
+
+
+
++keyframes(drop)	
+	0%   
+		top: 0  
+		opacity: 0
+	30%
+		top: 10px
+		opacity: 1
+	100%
+		top: 25px 
+		opacity: 0
+

@@ -1,0 +1,110 @@
+/* General styles for all menus */
+.cbp-aside 
+	background: $color-blue
+	position: fixed
+
+
+.cbp-aside h3 
+	color: #afdefa
+	font-size: 1.9em
+	padding: 20px
+	margin: 0
+	font-weight: 300
+	background: #0d77b6
+
+
+.cbp-aside a 
+	display: block
+	color: #fff
+	font-size: 1.1em
+	font-weight: 300
+
+
+.cbp-aside a:hover 
+	background: #258ecd
+
+
+.cbp-aside a:active 
+	background: #afdefa
+	color: $color-blue
+
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-aside-vertical 
+	width: $push-toleft
+	height: 100%
+	top: 0
+	z-index: 1000
+	a 
+		border-bottom: 1px solid #258ecd
+		padding: 1em
+
+
+
+.cbp-aside-right 
+	right: -$push-toleft
+	&.cbp-aside-open 
+		right: 0px
+
+
+/* Push classes applied to the body */
+.cbp-aside-push 
+	overflow-x: hidden
+	position: relative
+	left: 0
+
+
+.cbp-aside-push-toright 
+	left: $push-toleft
+
+
+.cbp-aside-push-toleft 
+	left: -$push-toleft
+
+
+/* Transitions */
+
+.cbp-aside,
+.cbp-aside-push 
+	@include transition(all 0.5s ease)
+
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em)
+
+	.cbp-aside-horizontal 
+		font-size: 75%
+		height: 110px
+	
+
+	.cbp-aside-top 
+		top: -110px
+	
+
+	.cbp-aside-bottom 
+		bottom: -110px
+	
+
+
+
+@media screen and (max-height: 26.375em)
+
+	.cbp-aside-vertical 
+		font-size: 90%
+		width: 190px
+	
+
+	.cbp-aside-left,
+	.cbp-aside-push-toleft 
+		left: -190px
+	
+
+	.cbp-aside-right 
+		right: -190px
+	
+
+	.cbp-aside-push-toright 
+		left: 190px
+	

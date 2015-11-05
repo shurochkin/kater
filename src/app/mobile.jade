@@ -1,0 +1,55 @@
+doctype html
+html(lang="en")
+	head
+		title Atmos Hovernetic
+		meta(charset='utf-8')
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width")
+
+		link(rel='stylesheet' href='mobile.css')
+
+
+	body.cbp-aside-push
+
+		include ./includes/header-mobile.jade
+		include ./includes/sidebar.jade
+
+
+		#content
+
+			#parallax.section
+				h1 <span>ATMOS</span><br>Проложи свои маршрут
+				img.front.wow.fadeInLeft.delay-0(src='images/mobile/1_kater.png')
+
+			include ./includes/slide-2.jade
+			include ./includes/slide-3-mobile.jade
+
+			#bg-gradient
+				include ./includes/slide-4-mobile.jade
+				include ./includes/slide-5.jade
+				include ./includes/slide-6.jade
+				include ./includes/slide-7.jade
+				include ./includes/slide-8.jade
+				include ./includes/slide-9-mobile.jade
+				include ./includes/slide-10-mobile.jade
+				include ./includes/slide-11-mobile.jade
+			
+				include ./includes/slide-12-mobile.jade
+			
+
+			include ./includes/slide-13-mobile.jade
+			#bg-grey
+				include ./includes/slide-14.jade
+				//include ./includes/slide-15.jade
+				include ./includes/slide-16.jade
+			#bg-white
+				include ./includes/slide-17-mobile.jade
+
+
+		block scripts
+			script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+			script(src="//spritespin.ginie.eu/spritespin.js")
+			script(src="libs/lodash.min.js")
+			script(src="libs/jquery.maskedinput.min.js")
+			
+			script(src="mobile.js")

@@ -1,0 +1,77 @@
+﻿doctype html
+html(lang="en")
+	head
+		title Atmos Hovernetic
+		meta(charset='utf-8')
+		meta(name="apple-mobile-web-app-capable" content="yes")
+		meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width")
+
+		script(src='libs/modernizr.js')
+		script(src="libs/pxloader-images.min.js")
+
+		block styles
+			link(rel='stylesheet' href='app.css')
+
+		script(type='text/javascript').
+			window.isMobile = false;
+
+
+			if (navigator.userAgent.match(/iPhone/i)
+			|| navigator.userAgent.match(/iPod/i)
+			|| navigator.userAgent.match(/Windows Phone/i)
+			|| (navigator.userAgent.match(/Android/i) && (navigator.userAgent.search("Mobile") > -1))
+			) {
+			    window.location.replace('mobile.html');
+			}
+
+			if( navigator.userAgent.match(/Android/i)
+			|| navigator.userAgent.match(/webOS/i)
+			|| navigator.userAgent.match(/iPhone/i)
+			|| navigator.userAgent.match(/iPad/i)
+			|| navigator.userAgent.match(/iPod/i)
+			|| navigator.userAgent.match(/BlackBerry/i)
+			|| navigator.userAgent.match(/Windows Phone/i)
+			){
+			    window.isMobile = true;
+			}
+
+	body.cbp-aside-push
+		include ./includes/preloader.jade	
+		section.fixed
+
+			include ./includes/background.jade
+
+		#fullpage.container
+			include ./includes/slide-1.jade
+			include ./includes/slide-2.jade
+			include ./includes/slide-3.jade
+			include ./includes/slide-9.jade
+			include ./includes/slide-10.jade
+			include ./includes/slide-11.jade
+			include ./includes/slide-12.jade
+			include ./includes/slide-16.jade
+			include ./includes/slide-14.jade
+			include ./includes/slide-17.jade
+			//- section.section#clear
+			
+		include ./includes/header-footer.jade
+		include ./includes/sidebar.jade
+
+		.overlay.no-scroll
+
+		#orientation-info
+			.orientation-copy
+				p PLEASE CHANGE YOUR ORIENTATION TO LANDSCAPE MODE
+
+
+		block scripts
+			script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js")
+			script(src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js")
+			script(src="//spritespin.ginie.eu/spritespin.js")
+			script(src="libs/lodash.min.js")
+			script(src="libs/jquery.fullPage.min.js")
+			script(src="libs/jquery.parallax.js")
+			script(src="libs/jquery.maskedinput.min.js")
+			script(src="libs/jquery.countTo.js")
+			
+			script(src="app.js")

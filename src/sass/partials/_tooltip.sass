@@ -1,0 +1,130 @@
+.box-tooltip
+  border: 2px solid rgba(255,255,255,.5)
+  width: 24px 
+  height: 24px
+  cursor: pointer
+  background: $color-blue
+  +transition(all .3s ease)
+  i
+    display: block
+    width: 20px
+    height: 20px
+    position: relative
+    &:before, &:after
+      content: ' '
+      display: block
+      background: rgba(255,255,255,.5)
+      position: absolute
+      +transition(all .3s ease)
+    &:before
+      width: 2px
+      height: 16px
+      top: 2px
+      left: 9px
+    &:after
+      width: 16px
+      height: 2px
+      top: 9px
+      left: 2px
+  &:hover
+    border: 2px solid rgba(255,255,255,.9)
+    i
+      &:before, &:after
+        background: rgba(255,255,255,.9)
+
+
+
+
+.tooltip_word
+  padding: 0 20px 0 0
+  color: $color-tooltip-border
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAMAAAAMCGV4AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA9QTFRF60MA7EMA7UQA7kQA////RYMfRAAAAC1JREFUeNpiYEYBTAyoXEYgnwUBiOdDSCYG7Hyw4djkGXHxibMf3f2YfIAAAwBepALsRyoboQAAAABJRU5ErkJggg==) center right no-repeat
+  cursor: pointer
+
+.tooltip_window
+  position: absolute
+  width: 380px
+  padding: 15px
+  background: $color-tooltip-bg
+  border: 5px solid $color-tooltip-border
+  +vr-baseline(.7em, 1.2em)
+  font-family: $font-thin
+  opacity: 0
+  z-index: 999
+  cursor: default
+  -webkit-box-shadow: 0 0 10px 0 $color-tooltip-shadow
+  box-shadow: 0 0 10px 0 $color-tooltip-shadow
+  +transition(opacity 50ms ease-out)
+
+.tooltip_show
+  opacity: 1
+
+.tooltip_window
+  color: $color-white
+  h5
+    +vr-baseline(1.2em, 1em)
+    margin-bottom: 0
+  p
+    padding-top: 0px
+    margin: 1em
+  img
+    padding-bottom: 10px
+
+.tooltip_top, .tooltip_bottom
+  position: absolute
+  margin-left: -16px
+  left: 50%
+  -webkit-box-shadow: 0 0 10px 0 $color-tooltip-shadow
+  box-shadow: 0 0 10px 0 $color-tooltip-shadow
+
+.tooltip_left, .tooltip_right
+  position: absolute
+  margin-top: -16px
+
+.tooltip_top:after, .tooltip_bottom:after, .tooltip_top:before, .tooltip_bottom:before
+  position: absolute
+  content: ''
+  left: 0
+  border: 16px solid transparent
+
+.tooltip_left:after, .tooltip_right:after, .tooltip_left:before, .tooltip_right:before
+  position: absolute
+  content: ''
+  top: 0
+  border: 10px solid transparent
+
+.tooltip_top
+  top: -36px
+  &:before
+    top: 0
+    border-bottom-color: $color-tooltip-border
+  &:after
+    top: 7px
+    border-bottom-color: $color-tooltip-bg
+
+.tooltip_bottom
+  bottom: -36px
+  &:before
+    bottom: 0
+    border-top-color: $color-tooltip-border
+  &:after
+    bottom: 7px
+    border-top-color: $color-tooltip-bg
+
+.tooltip_left
+  left: -24px
+  &:before
+    left: 0
+    border-right-color: $color-tooltip-border
+  &:after
+    left: 7px
+    border-right-color: $color-tooltip-bg
+
+.tooltip_right
+  right: -24px
+  &:before
+    right: 0px
+    border-left-color: $color-tooltip-border
+  &:after
+    right: 7px
+    border-left-color: $color-tooltip-bg
